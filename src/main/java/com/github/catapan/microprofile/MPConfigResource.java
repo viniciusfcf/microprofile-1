@@ -1,5 +1,7 @@
 package com.github.catapan.microprofile;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -11,6 +13,7 @@ import org.eclipse.microprofile.config.ConfigProvider;
 import org.eclipse.microprofile.config.spi.ConfigSource;
 
 @Path("/mp-config")
+@RequestScoped
 public class MPConfigResource {
 
 	@Inject
